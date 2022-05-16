@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,7 +23,6 @@ public class User {
 
 
     @Column(nullable = false, length = 64)
-    @ValidPassword
     private String password;
 
     @Column(nullable = false,unique = false,length = 20)
